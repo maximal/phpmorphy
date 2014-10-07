@@ -7,7 +7,7 @@ phpMorphy is morphological analyzer library for Russian, English and German lang
  * SF project: http://sourceforge.net/projects/phpmorphy
 
 
-This library allows to retrieve and follow morph information for any word:
+This library allows to retrieve following morph information for any word:
  * base (normal) form;
  * all forms;
  * grammatical (part of speech, grammems) information.
