@@ -1,0 +1,34 @@
+{
+	"name": "maximal/phpmorphy",
+	"description": "phpMorphy is morphological analyzer library for Russian, English and German languages.",
+	"keywords": [
+		"phpMorphy",
+		"php-morphy",
+		"phpmorphy"
+	],
+	"homepage": "http://phpmorphy.sourceforge.net/",
+	"type": "library",
+	"license": "GNU GPL 2.1",
+	"authors": [
+		{
+			"name": "Kamaev Vladimir",
+			"email": "heromantor@users.sourceforge.net",
+			"homepage": "http://rmcreative.ru/",
+			"role": "developer"
+		},
+		{
+			"name": "MaximAL",
+			"email": "almaximal@ya.ru",
+			"homepage": "http://maximals.ru/",
+			"role": "refactoring, packaging"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {
+	},
+	"autoload": {
+		"psr-0": {
+			"phpMorphy": "src/"
+		}
+	}
+}
