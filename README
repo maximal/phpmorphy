@@ -1,13 +1,13 @@
-phpMorphy -- morphological analyzer library for Russisan, English and German languages
+phpMorphy is morphological analyzer library for Russian, English and German languages.
 
 Website (in russian): http://phpmorphy.sourceforge.net/
 SF project: http://sourceforge.net/projects/phpmorphy
 
 
-This library allow retireve follow morph information for any word:
- - Base(normal) form
- - All forms
- - Grammatical(part of speech, grammems) information
+This library allows to retrieve and follow morph information for any word:
+ - base (normal) form;
+ - all forms;
+ - grammatical (part of speech, grammems) information.
 
 ------------ SPEED -------------
  *-------------------*
@@ -36,10 +36,10 @@ This library allow retireve follow morph information for any word:
 
 Note: 
   All values are words per second speed.
-  Test platform: PHP 5.2.3, AMD Duron 800 with 512Mb memory, WinXP
+  Test platform: PHP 5.2.3, AMD Duron 800 with 512Mb memory, WinXP.
 
 ------------ INSTALLATION -------------
- See INSTALL file in current directory
+ See INSTALL file in current directory.
 
 ------------ USAGE -------------
- See example in ./examples directory
+ See example in ./examples directory.
