@@ -14,7 +14,7 @@ $opts = array(
 	// Extend graminfo for getAllFormsWithGramInfo method call
 	'with_gramtab' => false,
 	// Enable prediction by suffix
-	'predict_by_suffix' => true, 
+	'predict_by_suffix' => true,
 	// Enable prediction by prefix
 	'predict_by_db' => true
 );
@@ -28,7 +28,7 @@ $dict_bundle = new phpMorphy_FilesBundle($dir, 'rus');
 // Create phpMorphy instance
 try {
 	$morphy = new phpMorphy($dict_bundle, $opts);
-} catch(phpMorphy_Exception $e) {
+} catch (phpMorphy_Exception $e) {
 	die('Error occured while creating phpMorphy instance: ' . $e->getMessage());
 }
 
@@ -58,33 +58,33 @@ try {
 	$base_form = $morphy->getBaseForm($word_one);
 	$all_forms = $morphy->getAllForms($word_one);
 	$pseudo_root = $morphy->getPseudoRoot($word_one);
-	
-	if(false === $base_form || false === $all_forms || false === $pseudo_root) {
+
+	if (false === $base_form || false === $all_forms || false === $pseudo_root) {
 		die("Can`t find or predict $word_one word");
 	}
-	
+
 	echo 'base form = ' . implode(', ', $base_form) . "\n";
 	echo 'all forms = ' . implode(', ', $all_forms) . "\n";
-	
+
 	echo "Testing bulk mode...\n";
-	
+
 	// bulk mode speed-ups processing up to 50-100%(mainly for getBaseForm method)
 	// in bulk mode all function always return array
 	$bulk_words = array($word_one, $word_two);
 	$base_form = $morphy->getBaseForm($bulk_words);
 	$all_forms = $morphy->getAllForms($bulk_words);
 	$pseudo_root = $morphy->getPseudoRoot($bulk_words);
-	
+
 	// Bulk result format:
 	// array(
 	//   INPUT_WORD1 => array(OUTWORD1, OUTWORD2, ... etc)
-	//   INPUT_WORD2 => FALSE <-- when no form for word found(or predicted) 
+	//   INPUT_WORD2 => FALSE <-- when no form for word found(or predicted)
 	// )
 	echo 'bulk mode base form = ' . implode(', ', $base_form[$word_one]) . ' ' . implode(', ', $base_form[$word_two]) . "\n";
 	echo 'bulk mode all forms = ' . implode(', ', $all_forms[$word_one]) . ' ' . implode(', ', $all_forms[$word_two]) . "\n";
-	
+
 	// You can also retrieve all word forms with graminfo via getAllFormsWithGramInfo method call
 	// $all_forms_with_gram = $morphy->getAllFormsWithGramInfo($word_one);
-} catch(phpMorphy_Exception $e) {
-	die('Error occured while text processing: ' . $e->getMessage());
+} catch (phpMorphy_Exception $e) {
+	die('Error occurred while text processing: ' . $e->getMessage());
 }
